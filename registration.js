@@ -1,5 +1,6 @@
 const form = document.querySelector('#regisForm')
-const successMessage = document.querySelector('#success-message')
+// const successMessage = document.querySelector('#success-message')
+
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
@@ -107,12 +108,21 @@ form.addEventListener("submit", (e) => {
 
 
     if (isValid) {
-        window.open("regis-success.html", successMessage)
+        window.location.href= "regis-success.html";
+        // let text= "aaa";
+        // let successMessage = "<a href= 'https://regis-success.html')> </a>";
+        // document.querySelector(".submit-btn") = successMessage
         form.reset()
-        successMessage.classList.add('active')
-      
-
+        localStorage.setItem("fullName", fullName);
+        localStorage.setItem("userName", userName);
+        localStorage.setItem("email", email)
+        localStorage.setItem("phoneNumber", phoneNumber);
+        localStorage.setItem("passwordName", passwordName);
+        localStorage.setItem("confirmPassword", confirmPassword);
+        localStorage.setItem("gender", gender)
     }
+
+
 
 })
 

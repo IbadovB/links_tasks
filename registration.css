@@ -148,7 +148,7 @@ form .button input:hover {
 input:focus.error,
 input:active.error {
     outline: none;
-   
+
 }
 
 .input-box {
@@ -157,7 +157,7 @@ input:active.error {
 }
 
 .input-box input:focus {
-outline: 0;
+    outline: 0;
 }
 
 .input-box.success input {
@@ -168,32 +168,32 @@ outline: 0;
     border-color: #ff3860;
 }
 
-.input-box .form{
-    color:#ff3860;
+.input-box .form {
+    color: #ff3860;
     font-size: 9px;
     height: 13px;
 }
 
 
-.form-alert {    
+.form-alert {
     display: none;
     color: red;
     margin-top: .5rem;
-   
+
 }
 
-.success-message{
+.success-message {
     display: none;
 }
 
-.active {
-    /* background: 100px 200px red; 
+/*.active {
+    background: 100px 200px red;
     text-align: center;
-    padding: 5px;*/
-    width: 100px;
+    padding: 5px;
+     width: 100px;
     height: 100px;
     display: block;
-}
+}*/
 
 
 @media (max-width: 584px) {
@@ -213,10 +213,10 @@ outline: 0;
 
     .container form .user-details {
         max-height: 300px;
-        overflow-y:scroll;
+        overflow-y: scroll;
     }
 
-.user-details::-webkit-scrollbar{
-width:0;
-}
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
 }
