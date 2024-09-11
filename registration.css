@@ -186,14 +186,7 @@ input:active.error {
     display: none;
 }
 
-/*.active {
-    background: 100px 200px red;
-    text-align: center;
-    padding: 5px;
-     width: 100px;
-    height: 100px;
-    display: block;
-}*/
+
 
 
 @media (max-width: 584px) {

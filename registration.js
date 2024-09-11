@@ -1,5 +1,5 @@
 const form = document.querySelector('#regisForm')
-// const successMessage = document.querySelector('#success-message')
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -11,7 +11,6 @@ form.addEventListener("submit", (e) => {
     const gender = document.querySelector('input[name="gender-type"]:checked')
     const passwordName = document.querySelector('#passwordName').value.trim()
     const confirmPassword = document.querySelector('#confirmPassword').value.trim()
-    //const submit = document.querySelector('#submit-btn').checked
     const formAlert = document.querySelectorAll('.form-alert')
 
 
@@ -108,10 +107,7 @@ form.addEventListener("submit", (e) => {
 
 
     if (isValid) {
-        window.location.href= "regis-success.html";
-        // let text= "aaa";
-        // let successMessage = "<a href= 'https://regis-success.html')> </a>";
-        // document.querySelector(".submit-btn") = successMessage
+        window.location.href = "regis-success.html";
         form.reset()
         localStorage.setItem("fullName", fullName);
         localStorage.setItem("userName", userName);
@@ -121,30 +117,9 @@ form.addEventListener("submit", (e) => {
         localStorage.setItem("confirmPassword", confirmPassword);
         localStorage.setItem("gender", gender)
     }
-
-
-
 })
 
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
