@@ -12,8 +12,7 @@
 <body>
     <div class="container">
         <div class="title">Registration</div>
-        <div class="test">
-            <form action="#" id="regisForm">
+            <form  id="regisForm">
                 <div class="user-details">
 
                     <div class="input-box">
@@ -31,7 +30,7 @@
                     <!-- =========== -->
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input id="email" type="email" placeholder="Enter your email" />
+                        <input id="email" type="email" placeholder="Enter your email">
                         <p class="form-alert">Please enter a valid email address</p>
                     </div>
                     <!-- =========== -->
@@ -56,28 +55,25 @@
                     </div>
                 </div>
 
-                <div class="gender-details">
-                    <!-- <input type="radio" name="gender" id="dot-1"> 
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">-->
+                <div class="gender-details">               
                     <span class="gender-title">Gender</span>
                     <div class="category">
 
-                        <label for="dot-1">
-                            <input type="radio" name="gender-type" id="dot-1" class="dot one">
+                        <label for="dot-1" >
+                            <input type="radio" name="gender-type" id="dot-1" class="dot one" value = "male">
                             <!-- <span class="dot one"></span> -->
                             <span class="gender">Male</span>
 
                         </label>
 
                         <label for="dot-2">
-                            <input type="radio" name="gender-type" id="dot-2" class="dot two">
+                            <input type="radio" name="gender-type" id="dot-2" class="dot two" value = "female">
                             <!-- <span class="dot two"></span> -->
                             <span class="gender">Female</span>
                         </label>
 
                         <label for="dot-3">
-                            <input type="radio" name="gender-type" id="dot-3" class="dot three">
+                            <input type="radio" name="gender-type" id="dot-3" class="dot three" value = "other">
                             <!-- <span class="dot three"></span> -->
                             <span class="gender">Prefer not to say</span>
                         </label>
@@ -87,29 +83,16 @@
                 </div>
 
                 <div class="button">
-                    <input type="submit" id="submit-btn" class="submit-btn" onclick="submit()" value="Register">
+                    <input type="submit" id="submit-btn" class="submit-btn" value="Register">
                 </div>
 
             </form>
-        </div>
-
+        
 
         <div class="userInfo">
             <h2>User detail</h2>
 
-            <h3>Full name: <span id="loginFullname"></span></h3>
-            <h3>Username: <span id="loginUsername"></span></h3>
-            <h3>Email: <span id="loginEmail"></span></h3>
-            <h3>Phone Number: <span id="loginPhonenumber"></span></h3>
-            <h3>Password name: <span id="passwordName"></span></h3>
-            <h3>Confirm Password: <span id="confirmPassword"></span></h3>
         </div>
-
-        <!-- <a href="regis-success.html"><div id="success-message" class="success-message">  
-              </div>
-        </a>
-    -->
-
         <script src="registration.js"></script>
 </body>
 

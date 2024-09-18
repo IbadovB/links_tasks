@@ -67,7 +67,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    margin: 25px 0 15px;
 }
 
 .remember-forgot label input {
@@ -116,4 +116,7 @@ body {
 
 .form-alert {
     display: none;
+    color: red;
+    margin-bottom: .5rem;
+
 }

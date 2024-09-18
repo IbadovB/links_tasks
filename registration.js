@@ -1,6 +1,9 @@
 const form = document.querySelector('#regisForm')
 
 
+
+
+
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
@@ -13,12 +16,14 @@ form.addEventListener("submit", (e) => {
     const confirmPassword = document.querySelector('#confirmPassword').value.trim()
     const formAlert = document.querySelectorAll('.form-alert')
 
-
     let isValid = true
+
+
 
     // fullName
     if (fullName === '') {
         isValid = false
+
         document.querySelector('#fullName + .form-alert').style.display = 'block'
         document.querySelector('#fullName').style.border = '1px solid red'
     } else {
@@ -29,6 +34,7 @@ form.addEventListener("submit", (e) => {
     // userName
     if (userName === '') {
         isValid = false
+
         document.querySelector('#userName + .form-alert').style.display = 'block'
         document.querySelector('#userName').style.border = '1px solid red'
     } else {
@@ -39,12 +45,12 @@ form.addEventListener("submit", (e) => {
     // email
     if (!isValidEmail(email)) {
         isValid = false
+
         document.querySelector('#email + .form-alert').style.display = 'block'
         document.querySelector('#email').style.border = '1px solid red'
     } else {
         document.querySelector('#email + .form-alert').style.display = 'none'
         document.querySelector('#email').style.border = '1px solid green'
-
     }
 
     // phoneNumber
@@ -77,26 +83,28 @@ form.addEventListener("submit", (e) => {
 
     // confirmPassword
     if (confirmPassword === '') {
-
         isValid = false
+
         document.querySelector('#confirmPassword + .form-alert').style.display = 'block'
         document.querySelector('#confirmPassword').style.border = '1px solid red'
-    } else if (confirmPassword === passwordName) {
-        isValid = true
-        document.querySelector('#confirmPassword + .form-alert').style.display = 'none'
-        document.querySelector('#confirmPassword').style.border = '1px solid green'
-    } else {
+    } else if (confirmPassword !== passwordName) {
+        isValid = false
+
         document.querySelector('#confirmPassword + .form-alert').innerHTML = 'Enter the same password please'
         document.querySelector('#confirmPassword + .form-alert').style.display = 'block'
         document.querySelector('#confirmPassword').style.border = '1px solid red'
-
+    } else {
+        document.querySelector('#confirmPassword + .form-alert').style.display = 'none'
+        document.querySelector('#confirmPassword').style.border = '1px solid green'
     }
 
 
 
     //  gender
     if (!gender) {
+
         isValid = false
+
         document.querySelector('.category + .form-alert').style.display = 'block'
     } else {
         document.querySelector('.category + .form-alert').style.display = 'none'
@@ -107,19 +115,20 @@ form.addEventListener("submit", (e) => {
 
 
     if (isValid) {
+
         window.location.href = "regis-success.html";
         form.reset()
         localStorage.setItem("fullName", fullName);
-        localStorage.setItem("userName", userName);
-        localStorage.setItem("email", email)
-        localStorage.setItem("phoneNumber", phoneNumber);
-        localStorage.setItem("passwordName", passwordName);
-        localStorage.setItem("confirmPassword", confirmPassword);
-        localStorage.setItem("gender", gender)
+         localStorage.setItem("userName", userName);
+         localStorage.setItem("email", email)
+         localStorage.setItem("phoneNumber", phoneNumber);
+         localStorage.setItem("passwordName", passwordName);
+         localStorage.setItem("confirmPassword", confirmPassword);
+         localStorage.setItem("gender", gender.value)
     }
 })
 
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email)
+    const emailRegex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    return emailRegex.test(email);
 }

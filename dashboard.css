@@ -7,8 +7,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
 }
+
 
 .suc-message {
     background: #fff;
@@ -20,15 +21,14 @@ body {
     border: 2px solid black;
     text-align: center;
     border-radius: 20px;
-    /* padding: 30px; */
 }
 
-.home {
+.logout {
     width: 200px;
     height: 40px;
     border: 2px solid #000;
     color: green;
     border-radius: 20px;
     font-size: 30px;
-     
+
 }

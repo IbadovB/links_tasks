@@ -11,24 +11,24 @@
 </head>
 
 <body>
-        <div class="wrapper">
-        <form action="#" id="regisForm">
+    <div class="wrapper">
+        <form id="regisForm">
             <h1>Login</h1>
             <div class="input-box">
                 <input type="text" placeholder="Username" id="username" required>
-                <p class="form-alert">Enter username please</p>
+                <p class="form-alert">Username incorrect. Please try again</p>
                 <i class='bx bxs-user'></i>
             </div>
-            <div class="input-box" >
+            <div class="input-box">
                 <input type="password" placeholder="Password" id="password" required>
-                <p class="form-alert">Enter password please</p>
-                <i class='bx bxs-lock-alt' ></i>
+                <p class="form-alert">Password incorrect. Please try again</p>
+                <i class='bx bxs-lock-alt'></i>
             </div>
             <div class="remember-forgot">
                 <label><input type='checkbox' onclick="remember"> Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <button type="submit" class="btn" onclick="submit()">Login</button>
+            <button type="submit" class="btn">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="registration.html">Register</a></p>
             </div>
